@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import messi from '../components/Messi.js';
+---
+
+<Layout title='Dominios'>
+  <main>
+    <h1>Dominios: {messi.length}</h1>
+    <a href='/conjunto'> Conjunto</a>
+    <br/>
+    <a href='/normales'> Normales</a>
+    <br/>
+    <a href='/baratos-normales'>Baratos y Normales</a>
+    <br/>
+    <a href='/baratos'>Baratos</a>
+    <br/>
+    <ul>
+      {
+        messi.map((m) => {
+          return (
+            <li>
+              <h2>{m.tld}</h2>
+              <h3>{m.register}</h3>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </main>
+</Layout>
+<style>
+  main {
+    width: 100vw;
+    min-height: 100vh;
+  }
+  h1 {
+    width: 100vw;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+  }
+  li,
+  h2,
+  h3 {
+    max-width: fit-content;
+    padding: 1px;
+    text-align: center;
+  }
+  li {
+    border: 1px solid black;
+    margin: 1px;
+    list-style: none;
+  }
+  h3 {
+    color: red;
+  }
+</style>

@@ -1,0 +1,14 @@
+.gb-domain-features,
+.gb-price--special,
+.Type,
+.Country,
+.Description,
+.Transfer,
+.ICANN,
+.Features {
+  display: none;
+}
+
+td,th {
+  border: 1px solid black;
+}
